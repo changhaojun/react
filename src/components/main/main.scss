@@ -1,0 +1,53 @@
+
+.main {
+    height: 60px;
+    .main-header {
+        height: 60px;
+        line-height: 60px;
+        font-size: 16px;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 16px 0px rgba(56,59,69,0.25);
+        >.header-logo{
+            float: left;
+            height: 60px;
+            // background: url('') no-repeat center;
+            width: 15%;
+        }
+        >.header-menu {
+            float: left;
+            height: 60px;
+            width: 45%;
+            display: flex;
+            flex-direction: row;
+            >li {
+                flex: 1;
+                .router-nav {
+                    display: block;
+                    color: #000;
+                    height: 30px;
+                    margin-top: 15px;
+                    line-height: 30px;
+                    flex: 1;
+                    margin-left:30px;
+                    text-align: center;
+                    color:rgba(80,80,80,0.78);
+                    border-radius:15px;
+                    transition: all linear 0.3s;
+                    &:hover{
+                        opacity: 0.6;
+                    } 
+                    &.active-router{
+                        background:rgba(255,165,9,1);
+                        box-shadow:0px 5px 10px 0px rgba(255,165,9,0.71);
+                        border-radius:15px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        >.quit {
+            float: right;
+            margin-right: 20px;
+        }
+    }
+}
