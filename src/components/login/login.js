@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $http from './../../public/server';
+import { Button } from 'antd';
 import './login.scss';
 
 class Login extends Component {
@@ -24,7 +25,7 @@ class Login extends Component {
     render() {
         return (
             <div className="login">
-                <button onClick={() => this.login()}>登录</button>
+                <Button type="primary" onClick={() => this.login()}>登录</Button >
             </div>
         );
     }

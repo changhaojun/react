@@ -26,6 +26,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "antd": "^3.16.5",
     "react-hot-loader": "^4.8.3",
     "react-router": "^4.0.0",
     "react-router-dom": "^5.0.0"

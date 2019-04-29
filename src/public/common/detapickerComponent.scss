@@ -1,0 +1,51 @@
+.datepicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .date-content {
+        display: flex;
+        align-items: center;
+        .ant-calendar-picker {
+            width: 276px;
+            .ant-input {
+                height: 40px;
+            }
+        }
+        
+        button {
+            margin-left: 20px;
+            border-radius: 16px;
+            width: 86px;
+            font-size: 16px;
+            height: 28px;
+            line-height: inherit;
+        }
+        .ant-btn-ghost:hover, .ant-btn-ghost:focus {
+            color: #333333;
+            border-color: #999999;
+            background: #f6f7f8;
+        }
+    }
+    .search {
+        position: relative;
+        input {
+            width: 200px;
+            border-radius: 16px;
+            background: #edeff2;
+            border-radius: 17px;
+            padding: 4px 15px;
+            padding-right: 30px;
+            height: 34px;
+        }
+        i {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 14px;
+            height: 14px;
+            overflow: hidden;
+            color: #999999;
+            cursor: pointer;
+        }
+    }
+}
