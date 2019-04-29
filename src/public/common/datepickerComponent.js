@@ -43,9 +43,11 @@ export default class DatepickerComponent extends Component {
             {startTime: moment(dateString[0]).format(this.state.format)},
             {endTime: moment(dateString[1]).add(1, 'days').format(this.state.format)},
         )
-        this.state.currentParams = data;
+        this.setState({currentParams: data}, () => {
+            this.send();
+        })
         this.setState({indexActive: 0});
-        this.send();
+        
     }
     changeBtn(index) {
         let start = null;
@@ -59,18 +61,19 @@ export default class DatepickerComponent extends Component {
         const startTime = start.format(this.state.format + ' HH');
         const endTime = moment().format(this.state.format + ' HH');
         let data = Object.assign({}, this.state.currentParams, {startTime: startTime}, {endTime: endTime});
-        this.state.currentParams = data
+        this.setState({currentParams: data}, () => {
+            this.send();
+        })
 
         const date = [start, moment(new Date())];
-        this.state.date = date;
+        this.setState({date: date})
         
         this.setState({indexActive: index})
-        this.send();
     }
     changeKey(event) {
         const value = event.target.value;
         let data = Object.assign({}, this.state.currentParams, {key: value});
-        this.state.currentParams = data;
+        this.setState({currentParams: data});
     }
     search(ev) {
         if (ev.type === 'click' || ev.key === 'Enter') {
