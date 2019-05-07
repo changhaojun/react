@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import {Message} from 'element-react';
 import convert from './convert.js'; //返回结果转为中文提示
 const Axios = axios.create({
     // baseURL: 'http://121.42.253.149:18859/app/mock/31/v1/',
